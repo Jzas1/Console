@@ -1,16 +1,99 @@
 
+function add(str){
+    let  arr=[], longest = str[0]
+     
+    for (let i=1; i<str.length; i++) {
+        let table = {}
+        let ans = ""
+        let count = 0
+            for (let j=i; j<str.length; j++) {
+                console.log(table[str[j]])
+                if (table[str[j]] === undefined) { 
+                    table[str[j]] = 1
+                    count++
+                    console.log(table[str[j]])
+                }
+                if (count <= str[0]) {
+                   ans += str[j]
+                }
+            }
+            if (ans.length > longest) {
 
-function shift(a,b){
-    let y = []
-    for(let i = 0; i <= a-1; i++){
-        y[i] = i+1
+                longest = ans.length
+                arr.push(ans)
+            }
     }
-    for(let j = y.length - 1; j >= 0; j-- ){
-       if(b-1 -j > 0) 
-    }
-}
+    return arr.sort(function(a,b) {return b.length-a.length})[0]
+    } 
 
-shift(4,5)
+
+
+
+
+console.log(add("2aabbcbbbadef"))
+// Output: bbcbbb
+
+console.log(add("3aabacbebebe"))
+// Output: cbebebe
+
+// function Consecutive(arr) { 
+//     let x = arr.sort(function(a, b){return a-b})
+
+    
+//     let y =   x[x.length-1] - x[0] - (x.length - 2)
+//     console.log(y)
+
+//    return arr; 
+ 
+//  }
+// Consecutive([1,2,3,4])
+
+// function add(arr){
+//     if( arr[1] - arr[0] === arr[2] - arr[1])
+//     return 'Arithmetic'
+//     else return -1
+// }
+
+
+// function Consecutive(arr) { 
+//     let x = arr.sort(function(a, b){return a-b})
+   
+     
+//        let y = (x[x.length-1] - x[0]) - (x.length -1)
+   
+   
+//      return y; 
+   
+//    }
+
+//    console.log(Consecutive([1,23,5]))
+//    console.log(Consecutive([-4,10]))
+//    console.log(Consecutive([1,5,9,10,11,12,14]))
+//    console.log(Consecutive([5,12,15,17,18,22]))
+//    console.log([20, 13, 7, 12])
+      
+
+
+
+// console.log(add(["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"]))
+
+
+// let array = [
+//     [1,2,3,4],
+//     [12,13,14,5],
+//     [11,16,15,6],
+//     [10,9,8,7]
+// ]
+// function add(arr){
+//     let arr2 = {...arr}
+//     let finale = {...arr2[0]}
+//     console.log(finale)
+//     for(let i =0; i < arr2.length-1; i++){
+//         arr
+//     }
+// }
+
+// add(array)
 
 // console.log(shift(5))
 
