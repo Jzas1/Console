@@ -1,39 +1,206 @@
+function add(input){
+    var unique = "";
+    var counter = 0;
+    var different ="";
+  for (i = 0; i < input.length; i++) {
+    if (input.lastIndexOf(input[i]) == input.indexOf(input[i])) {
+      unique += input[i];
 
-function add(str){
-    let  arr=[], longest = str[0]
-     
-    for (let i=1; i<str.length; i++) {
-        let table = {}
-        let ans = ""
-        let count = 0
-            for (let j=i; j<str.length; j++) {
-                console.log(table[str[j]])
-                if (table[str[j]] === undefined) { 
-                    table[str[j]] = 1
-                    count++
-                    console.log(table[str[j]])
-                }
-                if (count <= str[0]) {
-                   ans += str[j]
-                }
-            }
-            if (ans.length > longest) {
-
-                longest = ans.length
-                arr.push(ans)
-            }
+    }counter ++;
+  var count1 = (input.match(input[i]) || []).length;
+  }
+    if (counter <= 1)
+    {
+        console.log("YES");
     }
-    return arr.sort(function(a,b) {return b.length-a.length})[0]
-    } 
+    else if (counter > 1){
+        console.log("NO"); 
+    }
+}
+add('aytssbcd')
+
+
+// function add(sub1, s1, sub2, s2){
+//     let count = 'no'
+//     let count2 = 'no'
+//     let x = sub1.split('')
+//     let x1 = s1.split('')
+//     let y = sub2.split('')
+//     let y1 = s2.split('')
+
+//     for(let i=0; i < x.length -1; i++){
+//         if(x[i].includes(x1[i])){
+//             count= "yes"
+
+           
+//         }
+//     }
+//     for(let i=0; i < y.length -1; i++){
+//         if(y[i].includes(y1[i])){
+//             count2 = "yes"
+//         }
+//     }
+//     return(
+//     console.log(count),
+//     console.log(count2)
+//     )
+
+// }
+// console.log(add('hello','world', 'hi', 'world'))
+// function add(aOne, bTwo){   
+//     let x = aOne.concat(bTwo)
+//     console.log(x)
+//     x.sort(function(a,b){
+//         return a-b
+//     })
+//     console.log(x) 
+//     for(let i = 0; i < x.length -1; i++){
+//         x[i] - x[i+1] 
+//     }
+
+// }
+
+
+// arrayOne = [-1, 5, 10, 20, 28, 3]
+// arrayTwo = [26, 134, 135, 15, 17]
+
+// add(arrayOne, arrayTwo)
+
+
+// function moveElementToEnd(array, toMove){
+//     for(let i = 0; i < i.length - 1; i++){
+//         if(move === array[i]){
+//             array[i] = array[array.length-1]
+//         }
+//     }
+//     return array
+// }
+// console.log( add([1,3,4,2,2,2,2]))
+
+
+
+
+// let add = (inputArr) => {
+//     let len = inputArr.length;
+//     let swap = 0
+//     let swapped;
+//     do {
+//         swapped = false;
+//         for (let i = 0; i < len; i++) {
+//             if (inputArr[i] > inputArr[i + 1]) {
+//                 let tmp = inputArr[i];
+//                 inputArr[i] = inputArr[i + 1];
+//                 inputArr[i + 1] = tmp;
+//                 swapped = true;
+//                 swap++
+//             }
+//         }
+//     } while (swapped);
+//         console.log(`Array is sorted in ${swap} swaps`)
+//         console.log(`First Element: ${inputArr[0]} `)
+//         console.log(`Last Element: ${inputArr[inputArr.length -1]}`)
+// };
+
+//  console.log(add([6,4,1]))
+//  console.log(add([3,2,1]))
+//  console.log(add([2, 1,3]))
+
+
+// 
+// function add(x, prices, y ){
+//     let toys =0
+//     prices.sort(function(a,b){
+//         return a - b
+
+//     })
+//     let count =0
+//     prices.forEach(number =>{
+    
+//     if(count + number <= y){
+//         count = count + number
+//         console.log(count)
+//         toys++
+
+//     }
+// })
+//  return toys
+
+// }
+// console.log(add(1,[1, 12, 5, 111, 200, 1000, 10], 50))
+
+
+// console.log('working')
+
+// function add(str){
+    
+//     let x =[]
+//    x =  str.split('')
+//    let count = 0
+//     for(let i = 0; i < x.length - 1; i++){
+//         if(x[i]===x[i+3] && x[i+1]===x[i+2]){
+//             count++
+//             count++
+//             count++
+//         } else if(x[i]===x[i+2] && x[i] === x[i+1]){
+//             count++
+//             count++
+        
+//         } else if (x[i]===x[i+2] || x[i] === x[i+1]){
+//             count++
+//         } 
+//     }
+
+        
+//     console.log(count + x.length)  
+        
+//      return count + x.length
+
+
+
+// }
+
+// add('asasd')
+// add('abcbaba')
+// add('aaaa')
+
+
+
+
+// function add(str){
+//     let  arr=[], longest = str[0]
+     
+//     for (let i=1; i<str.length; i++) {
+//         let table = {}
+//         let ans = ""
+//         let count = 0
+//             for (let j=i; j<str.length; j++) {
+//                 console.log(table[str[j]])
+//                 if (table[str[j]] === undefined) { 
+//                     table[str[j]] = 1
+//                     count++
+//                     console.log(table[str[j]])
+//                 }
+//                 if (count <= str[0]) {
+//                    ans += str[j]
+//                 }
+//             }
+//             if (ans.length > longest) {
+
+//                 longest = ans.length
+//                 arr.push(ans)
+//             }
+//     }
+//     return arr.sort(function(a,b) {return b.length-a.length})[0]
+//     } 
 
 
 
 
 
-console.log(add("2aabbcbbbadef"))
-// Output: bbcbbb
+// console.log(add("2aabbcbbbadef"))
+// // Output: bbcbbb
 
-console.log(add("3aabacbebebe"))
+// console.log(add("3aabacbebebe"))
 // Output: cbebebe
 
 // function Consecutive(arr) { 
